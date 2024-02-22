@@ -2,10 +2,10 @@ const List = ({ note, removeNote }) => {
 
 
     return (
-            <ul className="bg-green-200">
+            <ul className="grid grid-cols-1 content-center text-2xl">
                 {note.map((notes, index) =>(
-                    <li key={index}>
-                        <p className="border-5 border-white">{notes.textNote}</p>
+                    <li className="m-5 p-2 border-2 rounded-md" key={index}>
+                        <p className="text-semibold">{notes.textNote}</p>
                         <button onClick={() => removeNote(notes)}>Supprimer note</button>
                     </li>
                 ))}

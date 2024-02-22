@@ -30,45 +30,41 @@ function App() {
     setNote(data);
     setLoaded(true);
   }, []);
+
+
   const [install, setInstall] = useState(false);
 
-  const deferredPrompt = useRef(null);
-  useEffect(() => {
-    const handler = (e) => {
-      e.preventDefault();
-      deferredPrompt.current = e;
-      console.log("Change prompt", deferredPrompt)
-      setInstall(true);
-    };
+  const deferredPrompt = useRef(null); 
 
-    window.addEventListener('beforeinstallprompt', handler);
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handler);
-    };
-  }, []);
-  const handleInstall = () => {
-    deferredPrompt.current.prompt();
-    deferredPrompt.current.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        alert("Merci d'avoir installé l'application !")
-      } else {
-        console.log('L\'utilisateur a refusé l\'installation');
-      }
-      deferredPrompt.current = null;
-    });
-    setInstall(false);
-  }
 
   useEffect(() => {
     const handler = (e) => {
-      e.preventDefault();
-      setInstall(e.prompt);
+
+    e.preventDefault();
+    setInstall(e.prompt);
     };
     window.addEventListener('beforeinstallprompt', handler);
     return () => {
-      window.removeEventListener('beforeinstallprompt', handler);
+    window.removeEventListener('beforeinstallprompt', handler);
     };
-  }, []);
+    }, []);
+    
+const handleInstall = () => {
+deferredPrompt.current.prompt();
+deferredPrompt.current.userChoice.then((choiceResult) => {
+if (choiceResult.outcome === 'accepted') {
+alert("Merci d'avoir installé l'application !")
+} else {
+console.log('L\'utilisateur a refusé l\'installation');
+}
+deferredPrompt.current = null;
+});
+setInstall(false);
+}
+
+
+
+  
   return (
     <>
       <Header />
