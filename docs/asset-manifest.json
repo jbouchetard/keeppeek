@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/keeppeek/static/css/main.29b45b79.css",
-    "main.js": "/keeppeek/static/js/main.298fe6b6.js",
+    "main.css": "/keeppeek/static/css/main.0dfea6a7.css",
+    "main.js": "/keeppeek/static/js/main.4b623ac3.js",
     "static/js/453.22f5c718.chunk.js": "/keeppeek/static/js/453.22f5c718.chunk.js",
+    "service-worker.js": "/keeppeek/service-worker.js",
     "index.html": "/keeppeek/index.html",
-    "main.29b45b79.css.map": "/keeppeek/static/css/main.29b45b79.css.map",
-    "main.298fe6b6.js.map": "/keeppeek/static/js/main.298fe6b6.js.map",
+    "main.0dfea6a7.css.map": "/keeppeek/static/css/main.0dfea6a7.css.map",
+    "main.4b623ac3.js.map": "/keeppeek/static/js/main.4b623ac3.js.map",
     "453.22f5c718.chunk.js.map": "/keeppeek/static/js/453.22f5c718.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29b45b79.css",
-    "static/js/main.298fe6b6.js"
+    "static/css/main.0dfea6a7.css",
+    "static/js/main.4b623ac3.js"
   ]
 }
